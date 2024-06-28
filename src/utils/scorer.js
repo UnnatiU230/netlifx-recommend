@@ -1,11 +1,11 @@
 const moment = require('moment');
-const gaussian = require('./guassian'); // Ensure this path is correct
+const gaussian = require('./guassian'); 
 
 const calculateTimeDeltaScore = (releaseDate) => {
   const today = moment();
   const release = moment(releaseDate);
   const timeDelta = today.diff(release, 'days');
-  return gaussian(timeDelta, 0, 365); // Assuming 1 year variance for the Gaussian function
+  return gaussian(timeDelta, 0, 365); 
 };
 
 const calculateGenrePreferenceScore = (movieGenres, userPreferences) => {
